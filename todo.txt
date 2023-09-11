@@ -1,0 +1,21 @@
+-Dome install and setup
+-Done Init database, superuser, test
+-Done Create core app for base pages
+-Done Create app for Accounts and userprofiles
+-Done Create app for products
+-Done add category moedel
+-Done list out newest products on the front pages
+-Done product detail view
+-Done prduct detail view
+-Done category view
+-Show vendor on product detail page
+- Simple Search
+- Vendor detail pages
+-Make it possible to signup, log in and logout
+-Create my account pages
+-Add product to the cart
+-View cart
+-Checkout
+-Implement payment gateway
+-Admin pages for the vendors
+-Deploy project

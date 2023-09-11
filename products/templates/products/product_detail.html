@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="product-detail">
+    <h2>Product Detail</h2>
+    <p>View and update product details:</p>
+    
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Update</button>
+    </form>
+    
+    <p>Product Information:</p>
+    <ul>
+      <li><strong>ID:</strong> {{ object.id }}</li>
+      <li><strong>Name:</strong> {{ object.name }}</li>
+      <li><strong>Price:</strong> {{ object.price }}</li>
+      <li><strong>Description:</strong> {{ object.description }}</li>
+      <!-- Add more fields here as needed -->
+    </ul>
+  </div>
+{% endblock %}

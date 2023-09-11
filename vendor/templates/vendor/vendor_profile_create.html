@@ -1,0 +1,10 @@
+{% extends 'base.html' %}  <!-- Assuming 'base.html' is your base template -->
+
+{% block content %}
+    <!-- Your HTML content for the Vendor Profile creation goes here -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Profile</button>
+    </form>
+{% endblock %}

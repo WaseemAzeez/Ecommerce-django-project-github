@@ -1,0 +1,12 @@
+{% extends 'base.html' %}  <!-- Assuming 'base.html' is your base template -->
+
+{% block content %}
+    <h1>Your Stores</h1>
+    <ul>
+        {% for store in stores %}
+            <li>{{ store.name }}</li>
+        {% empty %}
+            <li>No stores available.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

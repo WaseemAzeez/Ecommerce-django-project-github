@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Vendor Profiles{% endblock %}
+
+{% block content %}
+  <div class="vendor-profiles">
+    <h2>Vendor Profiles</h2>
+    
+    <ul>
+      {% for vendor in vendor_profiles %}
+        <li>
+          <strong>Name:</strong> {{ vendor.name }}<br>
+          <strong>Location:</strong> {{ vendor.location }}<br>
+          <!-- Display other vendor details as needed -->
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

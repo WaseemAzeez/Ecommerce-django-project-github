@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Vendor Profile Detail{% endblock %}
+
+{% block content %}
+  <div class="vendor-profile-detail">
+    <h2>Vendor Profile Detail</h2>
+    
+    <p>Name: {{ vendor_profile.name }}</p>
+    <p>Location: {{ vendor_profile.location }}</p>
+    <!-- Display other vendor profile details as needed -->
+    
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Update</button>
+    </form>
+  </div>
+{% endblock %}

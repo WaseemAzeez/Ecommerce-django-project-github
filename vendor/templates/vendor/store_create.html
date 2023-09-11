@@ -1,0 +1,10 @@
+{% extends 'base.html' %}  <!-- Assuming 'base.html' is your base template -->
+
+{% block content %}
+    <h1>Create a New Store</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ serializer_form.as_p }}
+        <button type="submit">Create Store</button>
+    </form>
+{% endblock %}

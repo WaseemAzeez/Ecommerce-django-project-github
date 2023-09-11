@@ -1,0 +1,8 @@
+{% extends 'base.html' %}  <!-- Assuming 'base.html' is your base template -->
+
+{% block content %}
+    <h1>{{ store.name }}</h1>
+    <p>{{ store.description }}</p>
+    <p>Location: {{ store.location }}</p>
+    <!-- You can display other details of the store here -->
+{% endblock %}

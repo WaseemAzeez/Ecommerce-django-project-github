@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Product Review{% endblock %}
+
+{% block content %}
+  <div class="review-detail">
+    <h2>Review Detail</h2>
+    <p>View and update review details:</p>
+    
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Update</button>
+    </form>
+    
+    <p>Review Information:</p>
+    <ul>
+      <li><strong>ID:</strong> {{ object.id }}</li>
+      <li><strong>Name:</strong> {{ object.name }}</li>
+      <li><strong>Rating:</strong> {{ object.rating }}</li>
+      <li><strong>Comment:</strong> {{ object.comment }}</li>
+      <!-- Add more fields here as needed -->
+    </ul>
+  </div>
+{% endblock %}

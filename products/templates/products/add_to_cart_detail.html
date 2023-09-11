@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Cart Item Detail{% endblock %}
+
+{% block content %}
+  <div class="cart-item-detail">
+    <h2>Cart Item Detail</h2>
+    
+    <p>Product: {{ cart_item.product.name }}</p>
+    <p>Quantity: {{ cart_item.quantity }}</p>
+    <!-- Display other cart item details as needed -->
+    
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Update</button>
+    </form>
+  </div>
+{% endblock %}
